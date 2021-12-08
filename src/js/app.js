@@ -1,4 +1,6 @@
-import locations from './store/locations'
+import './plugins';
+import locations from './store/locations';
+import '../scss/style.scss';
 
 locations.init().then(res => {
     console.log(res)
