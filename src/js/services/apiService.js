@@ -9,7 +9,7 @@ class Api {
 
         try {
             const response = await axios.get(`${this.url}/countries`)
-            console.log(response);
+            return response;
         } catch (err) {
             console.log(err);
             return Promise.reject(err);
@@ -18,7 +18,7 @@ class Api {
     async cities() {
         try {
             const response = await axios.get(`${this.url}/cities`)
-            console.log(response);
+            return response;
         } catch (err) {
             console.log(err);
             return Promise.reject(err);
