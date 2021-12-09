@@ -4,10 +4,84 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Avia Ticket App</title>
+    <title>Avia Tickets App</title>
   </head>
   <body>
-    <h1>Avia Ticket App</h1>
-    <button type="button" class="btn btn-primary">Primary</button>
+
+    <div class="container-fluid  bg-info">
+      <div class="row py-2">
+          
+          <div class="col-4 col-mb-4"><span class="h2 text-white">Avia Tickets App</span></div>
+      
+          <div class="col-8 col-mb-8 d-flex justify-content-end">
+
+            <div class="row">
+              <form name="currencySelect">
+                  <div class="input-group ">
+                    <i class="bi bi-currency-exchange input-group-text"></i>
+                    <select class="form-select form-control" >
+                      <option  value="dollar" selected>$ US Dollar</option>
+                      <option value="euro">€ Euro</option>
+                    </select>
+                  </div>     
+              </form>
+            </div>
+
+          </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="card  col-6 px-0 m-3">
+          <div class="card-header">
+            <h2>Title</h2>
+          </div>
+          <div class="card-body">
+            <form>
+              <label for="originDatalist" class="form-label">Origin</label>
+              <input class="form-control" list="originDatalistOptions" id="originDatalist" placeholder="Type to search...">
+              <datalist id="originDatalistOptions">
+                <option value="San Francisco">
+                <option value="New York">
+                <option value="Seattle">
+                <option value="Los Angeles">
+                <option value="Chicago">
+              </datalist>
+
+              <label for="destinationDatalist" class="form-label">Origin</label>
+              <input class="form-control" list="destinationDatalistOptions" id="destinationDatalist" placeholder="Type to search...">
+              <datalist id="destinationDatalistOptions">
+                <option value="San Francisco">
+                <option value="New York">
+                <option value="Seattle">
+                <option value="Los Angeles">
+                <option value="Chicago">
+              </datalist>
+
+              <label for="departDate" class="form-label">Depart date</label>
+              <input class="form-control" type="date" id="departDate">
+
+              <label for="returnDate" class="form-label">Depart date</label>
+              <input class="form-control" type="date" id="returnDate">
+            </form>
+          </div>
+          <div class="card-footer d-flex justify-content-between">
+            <button class="btn btn-danger">
+              <i class="bi bi-x-circle"></i>
+              Reset
+            </button>
+            <button class="btn btn-primary">
+              <i class="bi bi-search"></i>
+              Search
+            </button>
+          </div>
+        </div>
+      </div>      
+    </div>
+
+
+              
   </body>
 </html>
