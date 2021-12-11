@@ -33,7 +33,10 @@ class Locations {
     }
 
     getCityCodeByKey(key) {
-        return this.cities[key].code;
+        const city = Object.values(this.cities).find((item) => {
+            return item.full_name === key;
+        });
+        return city.code;
     }
 
     getShortDate(date) {
@@ -41,9 +44,9 @@ class Locations {
     }
 
     createShortCitiesList(cities) {
-        return Object.entries(cities).reduce((acc, [city_name, city]) => {
+        return Object.values(cities).reduce((acc, city) => {
             const data = {
-                label: city_name,
+                label: city.full_name,
                 value: city.code,
             }
             acc.push(data)
@@ -62,8 +65,12 @@ class Locations {
         return cities.reduce((acc, city) => {
             const country_name = this.getCountryNameByCode(city.country_code);
             const city_name = city.name || city.name_translations.en;
-            const key = `${city_name}, ${country_name}`
-            acc[key] = city;
+            const full_name = `${city_name}, ${country_name}`;
+            acc[city.code] = {
+                ...city,
+                country_name,
+                full_name,
+            }
             return acc;
         }, {})
     }
