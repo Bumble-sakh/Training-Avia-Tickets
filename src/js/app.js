@@ -35,6 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return_date,
             currency,
         });
-    }    
+    }
 
 });
