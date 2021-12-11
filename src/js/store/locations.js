@@ -8,6 +8,7 @@ class Locations {
         this.cities = null;
         this.shortCitiesList = null;
         this.airlines = null;
+        this.tickets = null;
     }
     async init() {
         const response = await Promise.all([
@@ -94,6 +95,7 @@ class Locations {
 
     async fetchTickets(params) {
         const response = await this.api.prices(params);
+        this.tickets = this.serializeTickets(response.data.data);
     }
 
     serializeTickets(tickets) {
@@ -105,7 +107,7 @@ class Locations {
                 airline_logo: this.getAirlineLogoByCode(ticket.airline),
                 airline_name: this.getAirlineNameByCode(ticket.airline),
                 departure_formated: formatDate(ticket.departure_at, 'dd MMM yyyy hh:mm'),
-                return_formated: formatDate(ticket.returnat_at, 'dd MMM yyyy hh:mm'),
+                return_formated: formatDate(ticket.return_at, 'dd MMM yyyy hh:mm'),
             }
         })
     }
