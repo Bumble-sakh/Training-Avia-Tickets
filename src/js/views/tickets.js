@@ -86,7 +86,7 @@ class TicketsUI {
                             <button type="button" class="btn btn-primary btn-sm" disabled>
                                 ${ticket.currency_symbol} ${ticket.price}
                             </button>
-                            <button type="button" class="btn btn-warning btn-sm shadow-none">
+                            <button type="button" class="btn btn-warning btn-sm shadow-none btn-favotites">
                                 <i class="bi bi-heart text-white"></i>
                             </button>
                         </div>                
