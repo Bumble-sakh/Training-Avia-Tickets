@@ -83,7 +83,7 @@ class TicketsUI {
                 </div>
                 <div class="col-4">
                 <p class="bg-info my-0 text-center">
-                    ${ticket.price}
+                    ${ticket.currency_symbol} ${ticket.price}
                 </p>
                 </div>
             </div>

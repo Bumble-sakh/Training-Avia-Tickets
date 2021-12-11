@@ -1,5 +1,6 @@
 import api from '../services/apiService';
 import { formatDate } from "../helpers/date";
+import currencyUI from '../views/currency';
 
 class Locations {
     constructor(api) {
@@ -108,6 +109,8 @@ class Locations {
                 airline_name: this.getAirlineNameByCode(ticket.airline),
                 departure_formated: formatDate(ticket.departure_at, 'dd MMM yyyy hh:mm'),
                 return_formated: formatDate(ticket.return_at, 'dd MMM yyyy hh:mm'),
+                currency: currencyUI.currencyValue,
+                currency_symbol: currencyUI.currencySymbol,
             }
         })
     }
