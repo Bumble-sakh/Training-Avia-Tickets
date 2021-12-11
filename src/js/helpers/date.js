@@ -1,4 +1,4 @@
-import { format } from 'date-dns';
+import { format } from 'date-fns';
 
 export function formatDate(str, type) {
     const date = new Date(str);

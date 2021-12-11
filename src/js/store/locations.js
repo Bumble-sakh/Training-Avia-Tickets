@@ -1,4 +1,5 @@
 import api from '../services/apiService';
+import { formatDate } from "../helpers/date";
 
 class Locations {
     constructor(api) {
@@ -103,10 +104,11 @@ class Locations {
                 destination_name: this.getCityNameByCode(ticket.destination),
                 airline_logo: this.getAirlineLogoByCode(ticket.airline),
                 airline_name: this.getAirlineNameByCode(ticket.airline),
+                departure_formated: formatDate(ticket.departure_at, 'dd MMM yyyy hh:mm'),
+                return_formated: formatDate(ticket.returnat_at, 'dd MMM yyyy hh:mm'),
             }
         })
     }
-
 
 }
 
