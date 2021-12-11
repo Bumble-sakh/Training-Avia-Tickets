@@ -37,9 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
             currency,
         });
 
-        console.log(locations.tickets);
+        ticketsUI.renderTickets(locations.tickets);
     }
-
-    ticketsUI.renderTickets(locations.tickets);
 
 });
