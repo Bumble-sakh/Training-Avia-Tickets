@@ -3,6 +3,7 @@ import locations from './store/locations';
 import '../scss/style.scss';
 import formUI from '../js/views/form';
 import currencyUI from './views/currency';
+import ticketsUI from "./views/tickets";
 
 document.addEventListener('DOMContentLoaded', () => {
     initApp();
@@ -35,6 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
             return_date,
             currency,
         });
+
+        console.log(locations.tickets);
     }
+
+    ticketsUI.renderTickets(locations.tickets);
 
 });
