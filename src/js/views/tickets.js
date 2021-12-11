@@ -72,21 +72,26 @@ class TicketsUI {
             </div>
 
             <div class="card-footer">
-            <div class="row justify-content-between align-items-center">
-                <div class="col-8">
-                <p class="text-muted my-0">
-                  ${ticket.departure_formated}
-                </p>
-                <p class="fw-bold my-0">
-                    Transfers: ${ticket.transfers} flight: ${ticket.flight_number}
-                </p>
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-8">
+                        <p class="text-muted my-0">
+                            ${ticket.departure_formated}
+                        </p>
+                        <p class="fw-bold my-0">
+                            Transfers: ${ticket.transfers} flight: ${ticket.flight_number}
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <div class="btn-group d-flex justify-content-end" role="group">
+                            <button type="button" class="btn btn-primary btn-sm" disabled>
+                                ${ticket.currency_symbol} ${ticket.price}
+                            </button>
+                            <button type="button" class="btn btn-warning btn-sm shadow-none">
+                                <i class="bi bi-heart text-white"></i>
+                            </button>
+                        </div>                
+                    </div>
                 </div>
-                <div class="col-4">
-                <p class="bg-info my-0 text-center">
-                    ${ticket.currency_symbol} ${ticket.price}
-                </p>
-                </div>
-            </div>
             </div>
 
         </div>
