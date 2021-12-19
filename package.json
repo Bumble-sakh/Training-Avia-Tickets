@@ -4,7 +4,7 @@
   "main": "./js/app.js",
   "scripts": {
     "dev": "webpack serve --open",
-    "build": "webpack"
+    "build": "webpack --mode=production"
   },
   "author": "Bumble",
   "license": "ISC",
